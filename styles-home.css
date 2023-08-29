@@ -1,0 +1,17 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+:root {
+
+}
+body {
+  background-color: black;
+  color: #fff;
+ 
+  display: grid;
+  place-items: center;
+  height: 100vh;
+}
+

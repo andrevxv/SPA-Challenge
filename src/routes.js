@@ -1,0 +1,37 @@
+import * as page from "./events.js"
+export class Router {
+  routes = {}
+
+  add(routeName, page) {
+    this.routes[routeName] = page
+  }
+  route(event) {
+    event = event || window.event
+    event.preventDefault()
+
+    window.history.pushState({}, "", event.target.href)
+
+    this.handle()
+  }
+
+  handle() {
+    const { pathname } = window.location
+    const route = this.routes[pathname] || this.routes[404]
+
+    if (pathname === "/") {
+      page.bgHome()
+    } else if (pathname === "/universe") {
+      page.bgUniverse()
+    } else if (pathname === "/explore") {
+      page.bgExplore()
+    }
+
+    fetch(route)
+      .then((data) => {
+        return data.text()
+      })
+      .then((html) => {
+        document.querySelector("#app").innerHTML = html
+      })
+  }
+}

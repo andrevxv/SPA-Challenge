@@ -1,0 +1,138 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+:root {
+  font-size: 62.5%;
+
+  --paragraph-text: #e1e1e6;
+  --inactive-link: #8d8d99;
+  --active-link: #ffffff;
+}
+body {
+  font-size: 1.6rem;
+  color: var(--paragraph-text);
+  font-family: "Roboto", sans-serif;
+
+  width: 100vw;
+  height: 100vh;
+
+  transition: background-image 0.8s;
+}
+.home {
+  background-image: url(./assets/mountains-universe-1.png);
+  background-repeat: no-repeat;
+  background-position: top;
+  background-size: cover;
+}
+.universe {
+  background-image: url(./assets/mountains-universe02.png);
+  background-repeat: no-repeat;
+  background-position: top;
+  background-size: cover;
+}
+.explore {
+  background-image: url(./assets/mountains-universe-3.png);
+  background-repeat: no-repeat;
+  background-position: top;
+  background-size: cover;
+}
+
+a {
+  color: #fff;
+}
+
+header {
+  padding: 4rem 0 4rem 7.2rem;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  gap: 5rem;
+  padding: 4rem 7.2rem;
+}
+
+nav a {
+  font-size: 2.2rem;
+  line-height: 2.2rem;
+  text-decoration: none;
+  color: var(--inactive-link);
+}
+
+.active-link {
+  color: var(--active-link);
+  font-weight: 700;
+}
+
+#app {
+  height: 80vh;
+  /* display: grid;
+  place-items: center; */
+}
+
+/* all pages */
+#app-home h1,
+#app-universe h1,
+#app-explore h1 {
+  font-size: 4.8rem;
+  font-weight: 700;
+  line-height: 6rem;
+  margin-bottom: 2.4rem;
+}
+
+#app-universe,
+#app-explore {
+  padding: 6rem 0 0 10rem;
+}
+
+/* end all pages */
+
+/* start home page */
+#app-home {
+  display: grid;
+
+  height: 100%;
+
+  align-content: center;
+
+  justify-items: center;
+
+  margin-top: -100px;
+}
+#app-home a {
+  font-family: "Roboto", sans-serif;
+  background: transparent;
+  color: #fff;
+  text-decoration: none;
+
+  padding: 1.2rem 3.2rem;
+
+  border: 2px solid #fff;
+  border-radius: 5px;
+
+  cursor: pointer;
+}
+/* end home page */
+
+/* start universe page */
+#app-universe p {
+  color: var(--paragraph-text);
+  font-size: 1.8rem;
+  font-weight: 400;
+  line-height: 2.8rem;
+
+  max-width: 64.8rem;
+}
+/* end universe page */
+
+/* start explore page */
+#app-explore p {
+  color: var(--paragraph-text);
+  font-size: 1.8rem;
+  font-weight: 400;
+  line-height: 2.8rem;
+
+  max-width: 64.8rem;
+}
